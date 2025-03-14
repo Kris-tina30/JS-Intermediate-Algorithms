@@ -11,7 +11,7 @@
 // print array
 
 let X = [1, -2, 4, 1];
-for (let num = 0; num < X.length; num++) {
+for (let num = X.length - 1; num >= 0; num--) {
   console.log(X[num]);
 
   if (X[num] < 0) {
@@ -20,3 +20,15 @@ for (let num = 0; num < X.length; num++) {
   }
 }
 console.log(X);
+
+function removeNegatives(arr) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) {
+      newArr.push(arr[i]);
+    }
+  }
+
+  return newArr;
+}
